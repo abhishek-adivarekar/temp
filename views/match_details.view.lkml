@@ -104,7 +104,7 @@ view: match_details {
     sql: ${win_by_runs};;
     style: integer
   }
-  dimension: weight_tier {
+  dimension: wickett_tier {
     type: tier
     tiers: [0,1]
     sql: ${win_by_wickets};;
