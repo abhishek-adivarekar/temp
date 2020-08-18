@@ -12,4 +12,10 @@ persist_with: fe_training_grp_2_default_datagroup
 
 explore: ball_by_ball_details_1 {}
 
-explore: match_details {}
+explore: match_details {
+  join: ball_by_ball_details_1 {
+    type: left_outer
+    sql_on: ${match_details.id}=${ball_by_ball_details_1.match_id} ;;
+    relationship: one_to_many
+  }
+}
