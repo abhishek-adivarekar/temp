@@ -106,13 +106,10 @@ view: ball_by_ball_details_1 {
     type: number
     sql: ${TABLE}.wide_runs ;;
   }
-  dimension: is_caught {
-    type: yesno
-    sql: ${dismissal_kind}="caught" ;;
-  }
+
   measure: count {
     type: count
-    drill_fields: []
+
   }
 
   measure: sum_total_runs {

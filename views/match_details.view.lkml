@@ -84,6 +84,11 @@ view: match_details {
     type: string
     sql: ${TABLE}.winner ;;
   }
+
+  dimension: is_toss_winner_a_winner {
+    type: yesno
+    sql: ${toss_winner}=${winner} ;;
+  }
   dimension: logo_ipl {
     type: string
     sql: '' ;;
