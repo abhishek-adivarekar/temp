@@ -91,6 +91,31 @@ view: match_details {
     <img width="200" height="200" src="https://vaastuyogam.com/wp-content/uploads/2017/05/IPL-1.jpg">
     </a> ;;
   }
+
+  dimension: run_tier {
+    type: tier
+    tiers: [0,1]
+    sql: ${win_by_runs};;
+    style: integer
+  }
+  dimension: weight_tier {
+    type: tier
+    tiers: [0,1]
+    sql: ${win_by_wickets};;
+    style: integer
+  }
+
+measure: avgrun{
+  type: average
+  sql: ${win_by_runs} ;;
+  value_format: "0.0"
+}
+
+  measure: avgweight{
+    type: average
+    sql: ${win_by_wickets} ;;
+    value_format: "0.0"
+  }
   measure: count {
     type: count
     drill_fields: [match_detail*]
