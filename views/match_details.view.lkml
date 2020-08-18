@@ -111,7 +111,7 @@ measure: avgrun{
   value_format: "0.0"
 }
 
-  measure: avgweight{
+  measure: avgwicket{
     type: average
     sql: ${win_by_wickets} ;;
     value_format: "0.0"
