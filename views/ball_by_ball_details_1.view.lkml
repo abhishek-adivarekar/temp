@@ -111,4 +111,10 @@ view: ball_by_ball_details_1 {
     type: count
     drill_fields: []
   }
+
+  measure: sum_total_runs {
+    description: "sum of total runs"
+    type: sum
+    sql: ${total_runs} ;;
+  }
 }
