@@ -20,6 +20,7 @@ view: ball_by_ball_details_1 {
   dimension: batting_team {
     type: string
     sql: ${TABLE}.batting_team ;;
+    drill_fields: [match_details.season,match_id]
   }
 
   dimension: bowler {
@@ -122,7 +123,11 @@ view: ball_by_ball_details_1 {
     sql: ball_by_ball_details_1.batting_team ;;
     drill_fields: [batting_team]
 }
+  measure: count_total_wickets {
+    type: sum
+    sql: ${number_of_wickets} ;;
 
+}
   measure: dismissalreason {
     label: "reason for dismissal"
     type: count

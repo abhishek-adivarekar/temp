@@ -43,6 +43,7 @@ view: match_details {
   dimension: season {
     type: number
     sql: ${TABLE}.season ;;
+    value_format: "0000"
   }
 
   dimension: team1 {
