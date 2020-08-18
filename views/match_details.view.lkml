@@ -86,6 +86,6 @@ view: match_details {
 
   measure: count {
     type: count
-    drill_fields: [id]
+    drill_fields: [id,date_date,winner,win_by_runs,win_by_wickets]
   }
 }
