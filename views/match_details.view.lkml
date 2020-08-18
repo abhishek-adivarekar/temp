@@ -37,6 +37,7 @@ view: match_details {
   dimension: result {
     type: string
     sql: ${TABLE}.result ;;
+
   }
 
   dimension: season {
@@ -83,9 +84,21 @@ view: match_details {
     type: string
     sql: ${TABLE}.winner ;;
   }
-
+  dimension: logo_ipl {
+    type: string
+    sql: '' ;;
+    html: <img src="https://vaastuyogam.com/wp-content/uploads/2017/05/IPL-1.jpg"> ;;
+  }
   measure: count {
     type: count
-    drill_fields: [id,date_date,win_by_runs,win_by_wickets,season,winner]
+    drill_fields: [match_detail*]
   }
+ measure: count_seasons {
+   type: count_distinct
+  sql: ${season} ;;
+  drill_fields: [season]
+ }
+set: match_detail {
+  fields: [id,date_date,win_by_runs,win_by_wickets,season,winner]
+}
 }
