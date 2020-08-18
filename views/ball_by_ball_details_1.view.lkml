@@ -70,7 +70,6 @@ view: ball_by_ball_details_1 {
   dimension: match_id {
     type: number
     sql: ${TABLE}.match_id ;;
-    primary_key: yes
   }
 
   dimension: noball_runs {
