@@ -40,7 +40,7 @@ view: ball_by_ball_details_1 {
   dimension: dismissal_kind {
     type: string
     sql: ${TABLE}.dismissal_kind ;;
-  }
+    }
 
   dimension: extra_runs {
     type: number
@@ -130,6 +130,8 @@ view: ball_by_ball_details_1 {
     label: "reason for dismissal"
     type: count
     filters: [dismissal_kind: "caught,bowled,lbw,obstructing the field,hit wicket,stumped,run out,retired hurt,caught and bowled"]
+    drill_fields: [player_dismissed,batting_team,match_id,match_details.season]
+
   }
 
 }
