@@ -107,7 +107,10 @@ view: ball_by_ball_details_1 {
     type: number
     sql: ${TABLE}.wide_runs ;;
   }
-
+  dimension: is_caught {
+    type: yesno
+    sql: ${dismissal_kind}="caught" ;;
+  }
   measure: count {
     type: count
     drill_fields: []
@@ -118,4 +121,11 @@ view: ball_by_ball_details_1 {
     type: sum
     sql: ${total_runs} ;;
   }
+  measure:  total_teams{
+    type: count_distinct
+    sql: ball_by_ball_details_1.batting_team ;;
+    drill_fields: [batting_team]
+}
+
+
 }
