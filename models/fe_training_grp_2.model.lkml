@@ -10,12 +10,12 @@ datagroup: fe_training_grp_2_default_datagroup {
 
 persist_with: fe_training_grp_2_default_datagroup
 
-explore: ball_by_ball_details_1 {}
-
-explore: match_details {
-  join: ball_by_ball_details_1 {
+explore: ball_by_ball_details_1 {
+  join: match_details {
     type: left_outer
-    sql_on: ${match_details.id}=${ball_by_ball_details_1.match_id} ;;
-    relationship: one_to_many
+    sql_on: ${ball_by_ball_details_1.match_id}=${match_details.id} ;;
+    relationship:many_to_one
   }
 }
+
+explore: match_details {}
