@@ -87,7 +87,9 @@ view: match_details {
   dimension: logo_ipl {
     type: string
     sql: '' ;;
-    html: <img src="https://vaastuyogam.com/wp-content/uploads/2017/05/IPL-1.jpg"> ;;
+    html:<a target="_blank" href="https://www.iplt20.com/">
+    <img width="200" height="200" src="https://vaastuyogam.com/wp-content/uploads/2017/05/IPL-1.jpg">
+    </a> ;;
   }
   measure: count {
     type: count
@@ -101,4 +103,5 @@ view: match_details {
 set: match_detail {
   fields: [id,date_date,win_by_runs,win_by_wickets,season,winner]
 }
+
 }
