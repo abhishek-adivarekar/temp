@@ -126,5 +126,10 @@ view: ball_by_ball_details_1 {
     drill_fields: [batting_team]
 }
 
+  measure: dismissalreason {
+    label: "reason for dismissal"
+    type: count
+    filters: [dismissal_kind: "caught,bowled,lbw,obstructing the field,hit wicket,stumped,run out,retired hurt,caught and bowled"]
+  }
 
 }
