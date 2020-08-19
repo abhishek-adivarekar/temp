@@ -128,6 +128,20 @@ view: ball_by_ball_details_1 {
     sql: ${number_of_wickets} ;;
 
 }
+  measure: current_season_total_run{
+    description: "latest season total runs"
+    type: average
+    sql: ${total_runs} ;;
+    filters: [match_details.season: "2013"]
+    value_format: "0.00"
+  }
+  measure: previous_season_total_run{
+    description: "latest season total runs"
+    type: average
+    sql: ${total_runs} ;;
+    filters: [match_details.season: "2012"]
+    value_format: "0.00"
+  }
   measure: dismissalreason {
     label: "reason for dismissal"
     type: count
