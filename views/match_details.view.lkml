@@ -115,12 +115,14 @@ measure: avgrun{
   type: average
   sql: ${win_by_runs} ;;
   value_format: "0.0"
+  drill_fields: [match_detail*]
 }
 
   measure: avgwicket{
     type: average
     sql: ${win_by_wickets} ;;
     value_format: "0.0"
+    drill_fields: [match_detail*]
   }
   measure: count {
     type: count
