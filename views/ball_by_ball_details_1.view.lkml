@@ -132,14 +132,14 @@ view: ball_by_ball_details_1 {
     description: "latest season total runs"
     type: average
     sql: ${total_runs} ;;
-    filters: [match_details.season: "2013"]
+    filters: [match_details.season: "2017"]
     value_format: "0.00"
   }
   measure: previous_season_total_run{
     description: "latest season total runs"
     type: average
     sql: ${total_runs} ;;
-    filters: [match_details.season: "2012"]
+    filters: [match_details.season: "2016"]
     value_format: "0.00"
   }
   measure: dismissalreason {
